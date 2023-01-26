@@ -1,3 +1,6 @@
 ```
 composer create-project --prefer-dist laravel/lumen product-management
+php -S localhost:8000 -t public
 ```
+
+create table user dengan kolom username, api_token
