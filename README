@@ -4,3 +4,21 @@ php -S localhost:8000 -t public
 ```
 
 create table user dengan kolom username, api_token
+
+comment out $app->withFacades(); to write to logging
+
+comment out $app->withEloquent(); to read from database in autentikasi
+
+```
+composer require illuminate/mail
+```
+
+prepare mailgun
+```
+composer require symfony/mailgun-mailer symfony/http-client
+```
+
+copy file mail.php from here
+https://github.com/laravel/laravel/blob/master/config/mail.php
+
+uncomment out $app->register(App\Providers\AppServiceProvider::class); to send email

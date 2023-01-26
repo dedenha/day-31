@@ -13,6 +13,8 @@
 |
 */
 
+$router->get('/send-email', 'Controller@sendEmail');
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
