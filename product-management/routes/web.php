@@ -26,12 +26,7 @@ $router->group(['prefix' => 'products'], function () use ($router) {
             "ukuran"=> "42"
         ]);
     });
-    $router->put('{productId}', function ($productId) {
-        return response()->json([
-            "id"=> $productId,
-            "msg"=> "Berhasil update data"
-        ]);
-    });
+    $router->put('{productId}', 'Controller@updateProduct');
     $router->get('', function () {
         return response()->json([
             [
