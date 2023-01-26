@@ -16,3 +16,54 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'products'], function () use ($router) {
+    $router->get('{productId}', function ($productId) {
+        return response()->json([
+            "id"=> $productId,
+            "name"=> "Sepatu",
+            "warna"=> "Putih",
+            "ukuran"=> "42"
+        ]);
+    });
+    $router->put('{productId}', function ($productId) {
+        return response()->json([
+            "id"=> $productId,
+            "msg"=> "Berhasil update data"
+        ]);
+    });
+    $router->get('', function () {
+        return response()->json([
+            [
+                "id"=> 1,
+                "name"=> "Sepatu",
+                "warna"=> "Putih",
+                "ukuran"=> "42"
+            ],
+            [
+                "id"=> 1,
+                "name"=> "Sepatu",
+                "warna"=> "Putih",
+                "ukuran"=> "42"
+            ],
+            [
+                "id"=> 1,
+                "name"=> "Sepatu",
+                "warna"=> "Putih",
+                "ukuran"=> "42"
+            ],
+            [
+                "id"=> 1,
+                "name"=> "Sepatu",
+                "warna"=> "Putih",
+                "ukuran"=> "42"
+            ],
+            [
+                "id"=> 1,
+                "name"=> "Sepatu",
+                "warna"=> "Putih",
+                "ukuran"=> "42"
+            ]
+        ]);
+    });
+});
