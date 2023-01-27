@@ -117,5 +117,6 @@ return [
 
     'domain' => env('MAILGUN_DOMAIN'),
     'secret' => env('MAILGUN_SECRET'),
+    'driver' => env('MAIL_DRIVER', 'mailgun'),
 
 ];
