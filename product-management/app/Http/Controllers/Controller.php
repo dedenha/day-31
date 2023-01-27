@@ -30,10 +30,6 @@ class Controller extends BaseController
         $message->to('kuroi.nichirin@gmail.com')
             ->subject('Lumen email test');
         });
-        if (Mail::failures()) {
-        return 'Sorry! Please try again latter :(';
-        } else {
         return 'Great! eMail successfully sent ;)';
-        }
     }
 }
